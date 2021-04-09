@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Services\ProductService.cs~RF16c552a.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="BE-prac1\.git\COMMIT_EDITMSG" />
+    <None Include="BE-prac1\.git\config" />
+    <None Include="BE-prac1\.git\description" />
+    <None Include="BE-prac1\.git\HEAD" />
+    <None Include="BE-prac1\.git\hooks\applypatch-msg.sample" />
+    <None Include="BE-prac1\.git\hooks\commit-msg.sample" />
+    <None Include="BE-prac1\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="BE-prac1\.git\hooks\post-update.sample" />
+    <None Include="BE-prac1\.git\hooks\pre-applypatch.sample" />
+    <None Include="BE-prac1\.git\hooks\pre-commit.sample" />
+    <None Include="BE-prac1\.git\hooks\pre-merge-commit.sample" />
+    <None Include="BE-prac1\.git\hooks\pre-push.sample" />
+    <None Include="BE-prac1\.git\hooks\pre-rebase.sample" />
+    <None Include="BE-prac1\.git\hooks\pre-receive.sample" />
+    <None Include="BE-prac1\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="BE-prac1\.git\hooks\update.sample" />
+    <None Include="BE-prac1\.git\index" />
+    <None Include="BE-prac1\.git\info\exclude" />
+    <None Include="BE-prac1\.git\logs\HEAD" />
+    <None Include="BE-prac1\.git\logs\refs\heads\main" />
+    <None Include="BE-prac1\.git\objects\08\12eafc5c9da44a6e002ef565b3c952c1c0c206" />
+    <None Include="BE-prac1\.git\objects\27\82ce7b24bb032912cf957059388a6147afe389" />
+    <None Include="BE-prac1\.git\objects\59\f35d282c7897abf8cacc4d38ac394cb880fbfd" />
+    <None Include="BE-prac1\.git\objects\df\e0770424b2a19faf507a501ebfc23be8f54e7b" />
+    <None Include="BE-prac1\.git\refs\heads\main" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.12.2" />
+  </ItemGroup>
+
+
+</Project>
