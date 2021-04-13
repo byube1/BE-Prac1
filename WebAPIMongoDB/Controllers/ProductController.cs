@@ -47,9 +47,9 @@ namespace WebAPIMongoDB.Controllers
         [HttpPut("{id:length(24)}")]
         public IActionResult Update(string id, Product productIn)
         {
-            var book = _productService.Get(id);
+            var product = _productService.Get(id);
 
-            if (book == null)
+            if (product == null)
             {
                 return NotFound();
             }
@@ -58,5 +58,20 @@ namespace WebAPIMongoDB.Controllers
 
             return NoContent();
         }
+
+        [HttpDelete("{id:length(24)}")]
+        public IActionResult Update(string id)
+        {
+            var product = _productService.Get(id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            _productService.Remove(id);
+            return NoContent();
+        }
+
     }
 }
