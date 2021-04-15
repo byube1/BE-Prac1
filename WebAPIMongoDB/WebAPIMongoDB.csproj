@@ -5,10 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BE-prac1\**" />
+    <Content Remove="BE-prac1\**" />
+    <EmbeddedResource Remove="BE-prac1\**" />
+    <None Remove="BE-prac1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Services\ProductService.cs~RF16c552a.TMP" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.14" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.12.2" />
   </ItemGroup>
