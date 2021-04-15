@@ -27,11 +27,11 @@ namespace WebAPIMongoDB
         public void ConfigureServices(IServiceCollection services)
         {
             // requires using Microsoft.Extensions.Options
-            services.Configure<ProductDbDatabaseSetting>(
-                Configuration.GetSection(nameof(ProductDbDatabaseSetting)));
+            services.Configure<DatabaseSettings>(
+                Configuration.GetSection(nameof(DatabaseSettings)));
 
-            services.AddSingleton<IProductDbDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<ProductDbDatabaseSetting>>().Value);
+            services.AddSingleton<IDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 
             var appSettingsSection = Configuration.GetSection("JwtConfig");
             services.Configure<JwtConfig>(appSettingsSection);
