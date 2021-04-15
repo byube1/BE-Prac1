@@ -60,7 +60,7 @@ namespace WebAPIMongoDB.Controllers
         }
 
         [HttpDelete("{id:length(24)}")]
-        public IActionResult Update(string id)
+        public IActionResult Delete(string id)
         {
             var product = _productService.Get(id);
 
