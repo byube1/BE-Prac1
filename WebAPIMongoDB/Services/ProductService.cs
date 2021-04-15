@@ -12,12 +12,11 @@ namespace WebAPIMongoDB.Services
     {
         private readonly IMongoCollection<Product> _product;
 
-        public ProductService(IProductDbDatabaseSettings settings)
+        public ProductService(IDatabaseSetting settings)
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
-
-            _product = database.GetCollection<Product>(settings.ProductCollectionName);
+            _product = database.GetCollection<Product>("product");
         }
 
         public List<Product> Get() =>

@@ -22,13 +22,14 @@ namespace WebAPIMongoDB
         public void ConfigureServices(IServiceCollection services)
         {
             // requires using Microsoft.Extensions.Options
-            services.Configure<ProductDbDatabaseSetting>(
-                Configuration.GetSection(nameof(ProductDbDatabaseSetting)));
+            services.Configure<DatabaseSetting>(
+                Configuration.GetSection(nameof(DatabaseSetting)));
+            services.AddSingleton<IDatabaseSetting>(sp =>
+                sp.GetRequiredService<IOptions<DatabaseSetting>>().Value);
 
-            services.AddSingleton<IProductDbDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<ProductDbDatabaseSetting>>().Value);
 
             services.AddSingleton<ProductService>();
+            services.AddSingleton<CustomerService>();
             services.AddCors();
             services.AddControllers();
         }
