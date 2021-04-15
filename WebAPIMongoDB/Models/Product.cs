@@ -20,7 +20,7 @@ namespace WebAPIMongoDB.Models
         [BsonElement("catelogy")]
         public string Category { get; set; }
         [BsonElement("dateCreate")]
-        public DateTime DateCreate { get; set; }
+        public string DateCreate { get; set; }
         [BsonElement("img")]
         public string Img { get; set; }
 
