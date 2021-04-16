@@ -12,6 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Controllers\CustomerController.cs~RF14c13016.TMP" />
+    <None Remove="Services\CustomerServices.cs~RF14bb8017.TMP" />
     <None Remove="Services\ProductService.cs~RF16c552a.TMP" />
   </ItemGroup>
 
