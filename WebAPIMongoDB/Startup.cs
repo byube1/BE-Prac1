@@ -62,6 +62,7 @@ namespace WebAPIMongoDB
 
             services.AddSingleton<ProductService>();
             services.AddSingleton<CustomerServices>();
+            services.AddSingleton<ShopppingCartServices>();
             services.AddCors();
             services.AddControllers();
         }
